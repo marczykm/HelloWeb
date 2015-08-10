@@ -16,7 +16,7 @@ public class HelloController{
         return "hello";
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/hobby", method = RequestMethod.GET)
     public String printHobby(Model model) {
         model.addAttribute("hobby", "Hobby");
         return "hobby";

@@ -5,5 +5,6 @@
 </head>
 <body>
    <h2>${message}</h2>
+   <a href="hobby">Hobby</a>
 </body>
 </html>
