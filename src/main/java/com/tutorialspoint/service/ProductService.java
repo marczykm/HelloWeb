@@ -8,6 +8,6 @@ import java.util.List;
  * Created by MarcinM on 2015-08-22.
  */
 public interface ProductService {
-    public void increasePriceOfAllProductsInCategory(final String category);
     public List<Product> findAllProducts();
+    public void addProduct(Product product);
 }

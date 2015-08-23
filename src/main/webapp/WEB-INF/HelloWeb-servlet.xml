@@ -13,8 +13,8 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <!--<context:annotation-config></context:annotation-config>-->
-    <context:component-scan base-package="com.tutorialspoint" />
+    <tx:annotation-driven/>
+    <context:component-scan base-package="com.tutorialspoint"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
@@ -43,18 +43,8 @@
         <property name="sessionFactory" ref="mySessionFactory"/>
     </bean>
 
-    <tx:annotation-driven/>
+    <bean id="myProductDao" class="com.tutorialspoint.dao.ProductDaoImpl"></bean>
 
-    <bean id="myProductDao" class="com.tutorialspoint.dao.ProductDaoImpl">
-        <property name="sessionFactory" ref="mySessionFactory"/>
-    </bean>
-
-    <bean id="myProductService" class="com.tutorialspoint.service.ProductServiceImpl">
-        <property name="productDao" ref="myProductDao"/>
-    </bean>
-
-    <bean id="helloController" class="com.tutorialspoint.HelloController">
-        <property name="productService" ref="myProductService"/>
-    </bean>
+    <bean id="myProductService" class="com.tutorialspoint.service.ProductServiceImpl"></bean>
 
 </beans>

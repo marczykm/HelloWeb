@@ -1,9 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
-<title>Hobby</title>
+<title>Hello World</title>
 </head>
 <body>
-   <h2>${users}</h2>
+   <h2>${message}</h2>
+   <a href="product">Products</a>
 </body>
 </html>
