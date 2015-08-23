@@ -4,9 +4,6 @@
 <title>Hobby</title>
 </head>
 <body>
-   <h2>${hobby}</h2>
-   <div>
-      ${products}
-   </div>
+   <h2>${users}</h2>
 </body>
 </html>
