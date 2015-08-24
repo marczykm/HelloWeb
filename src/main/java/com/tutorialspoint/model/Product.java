@@ -14,11 +14,11 @@ public class Product {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "price")
-    private int price;
-
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name = "price", nullable = false)
+    private int price;
 
     public Product() {
     }
