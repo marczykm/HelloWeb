@@ -8,6 +8,9 @@ import java.util.List;
  * Created by MarcinM on 2015-08-22.
  */
 public interface ProductService {
-    public List<Product> findAllProducts();
-    public void addProduct(Product product);
+    public List<Product> findAll();
+    public Product findById(Long id);
+    public void add(Product product);
+    public void update(Product product);
+    public void delete(Product product);
 }

@@ -8,7 +8,10 @@ import java.util.Collection;
  * Created by MarcinM on 2015-08-22.
  */
 public interface ProductDao {
-    public Collection findAllProducts();
-    public void addProduct(Product product);
+    public Collection findAll();
+    public void add(Product product);
+    public void update(Product product);
+    public void delete(Product product);
+    public Product findById(Long id);
 
 }

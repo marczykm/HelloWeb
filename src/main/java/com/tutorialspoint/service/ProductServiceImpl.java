@@ -24,12 +24,27 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Transactional(readOnly = true)
-    public List<Product> findAllProducts() {
-        return (List<Product>) this.productDao.findAllProducts();
+    public List<Product> findAll() {
+        return (List<Product>) this.productDao.findAll();
     }
 
     @Transactional
-    public void addProduct(Product product) {
-        this.productDao.addProduct(product);
+    public void add(Product product) {
+        this.productDao.add(product);
+    }
+
+    @Transactional(readOnly = true)
+    public Product findById(Long id) {
+        return productDao.findById(id);
+    }
+
+    @Transactional
+    public void update(Product product) {
+        productDao.update(product);
+    }
+
+    @Transactional
+    public void delete(Product product) {
+        productDao.delete(product);
     }
 }

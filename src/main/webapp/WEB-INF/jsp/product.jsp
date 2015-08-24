@@ -10,7 +10,7 @@
    <c:url var="addAction" value="/product/add"></c:url>
     <form:form action="${addAction}" commandName="newProduct">
         <table>
-            <c:if test="$!empty newProduct.name">
+            <c:if test="${!empty newProduct.name}">
             <tr>
                 <td>
                     <form:label path="id">
@@ -60,8 +60,8 @@
         </table>
     </form:form>
    <div>
-        <h3>Products list</h3>
         <c:if test="${!empty products}">
+        <h3>Products list</h3>
             <table>
                 <tr>
                     <th>ID</th>
@@ -75,8 +75,8 @@
                         <td>${product.id}</td>
                         <td>${product.name}</td>
                         <td>${product.price}</td>
-                        <td><a href="<c:url value='/edit/${product.id}' />">Edit</a></td>
-                        <td><a href="<c:url value='/delete/${product.id}' />">Delete</a></td>
+                        <td><a href="<c:url value='/product/edit/${product.id}' />">Edit</a></td>
+                        <td><a href="<c:url value='/product/delete/${product.id}' />">Delete</a></td>
                     </tr>
                 </c:forEach>
             </table>
